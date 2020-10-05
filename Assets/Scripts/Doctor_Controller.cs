@@ -43,8 +43,8 @@ public class Doctor_Controller : MonoBehaviour
     public SkinnedMeshRenderer playaHead;
     public bool punchedOnce = false;
     public ParticleSystem bloodParticles;
-    
-    
+
+    public ToothSoundProcessor toothSoundProcess;
     public GameLogicController gameLogicController;
     private void Start()
     {
@@ -71,6 +71,7 @@ public class Doctor_Controller : MonoBehaviour
     public IEnumerator StartMovingHands(bool forward)
     {
         var time = 0f;
+        toothSoundProcess.PlayDeepWhoosh();
         while (time < 1)
         {
             time += Time.deltaTime;
@@ -142,6 +143,7 @@ public class Doctor_Controller : MonoBehaviour
             
             if (Input.GetKeyDown("space"))
             {
+                toothSoundProcess.HitPunch();
                 if (!handsHitCycle && !rightHandCycle)
                 {
                     if (!punchedOnce)

@@ -16,7 +16,14 @@ public class ClientBehaviourHandler : MonoBehaviour
     public float speed = 5;
     public float mouthMoveSpeed = 1f;
 
-
+    public AudioClip[] audioClips;
+    public AudioClip cardPickup;
+    public AudioSource cardPickupSource;
+    public AudioSource audioSource;
+    public AudioSource transactionDeclinedSource;
+    public AudioClip transactionDeclined;
+    private int audioIndex = 0;
+    
     public GameObject creditCard;
     public FullBodyBipedIK playaFullBodyIk;
     public Doctor_Controller doctorController;
@@ -69,7 +76,7 @@ public class ClientBehaviourHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(.3f);
         creditCard.SetActive(cardDisplay);
-
+        cardPickupSource.PlayOneShot(cardPickup);
         var time = 0f;
         while (time < 1)
         {
@@ -87,6 +94,15 @@ public class ClientBehaviourHandler : MonoBehaviour
         else
         {
             StartCoroutine(MouthMovements(1, 10));
+            
+            audioSource.PlayOneShot(audioClips[audioIndex]);
+            audioIndex++;
+
+            if (audioIndex + 1 == audioClips.Length)
+            {
+                audioIndex = 0;
+            }
+            
             StartCoroutine(StopTalking());
         }
     }
@@ -119,6 +135,7 @@ public class ClientBehaviourHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Debug.Log("CARD DECLINED");
+        transactionDeclinedSource.PlayOneShot(transactionDeclined);
         yield return null;
         StopAllCoroutines();
         StartCoroutine(DoctorReadyToFight());
