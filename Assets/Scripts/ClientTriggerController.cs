@@ -14,6 +14,8 @@ public class ClientTriggerController : MonoBehaviour
     public Animator playaAnimator;
     public SkinnedMeshRenderer playaHead;
     public FBBIKHeadEffector playaHeadEffector;
+    public ClientBehaviourHandler playaHandler;
+    
     
     [Header("Playa Sit Config")]
     public float timeToTurn = 3f;
@@ -111,6 +113,7 @@ public class ClientTriggerController : MonoBehaviour
         }
         
 //        playa.GetComponent<SplineFollower>().enabled = true;
+        playaHandler.GiveCardToDoctor();
     }
     
     private void CloseMouthAndDetachHead(float value)

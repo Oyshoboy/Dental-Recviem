@@ -58,6 +58,50 @@ public class GameLogicController : MonoBehaviour
         }
     }
 
+    public void RemoveOneTooth()
+    {
+        if (Random.Range(0, 2) > 0 && upperShrinked.Count != upperTeeth.Count)
+        {
+            RemoveRandomTooth(upperTeeth, upperShrinked, true);
+        }
+        else if(lowerShrinked.Count != lowerTeeth.Count)
+        {
+            RemoveRandomTooth(lowerTeeth, lowerShrinked, false);
+        }
+        else
+        {
+            Debug.Log("NO MOR TOOTHS");
+        }
+    }
+
+    void RemoveRandomTooth(List<GameObject> toothList, List<int> jawShrinked, bool upperJaw)
+    {
+        var pickedIndex = Random.Range(0, toothList.Count);
+        //CHECK IF TOOTH BEEN SHRINKED ALREADY
+
+        if (jawShrinked.Contains(pickedIndex))
+        {
+            RemoveRandomTooth(toothList, jawShrinked, upperJaw);
+            Debug.Log("DUPLICATE, LET's DO AGAIN");
+            return;
+        }
+        else
+        {
+            Debug.Log("SHRINK TOOTH");
+            toothList[pickedIndex].GetComponent<FJiggling_Grow>().StartShrinking();
+            if (upperJaw)
+            {
+                upperShrinked.Add(pickedIndex);
+            }
+            else
+            {
+                lowerShrinked.Add(pickedIndex);
+            }    
+        }
+        
+        
+    }
+    
     public void GrowOneTooth()
     {
         if (upperShrinked.Count > 0)
