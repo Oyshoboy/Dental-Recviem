@@ -3,10 +3,10 @@
 
 Game about dentist for Ludum Dare 47
 
-Controls:
-Mouse - to manipulate with teeth implants.
-
-Space - to punch
-
-Ludum Dare Page: https://ldjam.com/events/ludum-dare/47/$220946
-Itch.io Page: https://oyshoboy.itch.io/dental-recviem
+<b>Controls:</b><br>
+<b>Mouse</b> - to manipulate with teeth implants.<br>
+<br>
+<b>Space</b> - to punch<br>
+<br>
+Ludum Dare Page: https://ldjam.com/events/ludum-dare/47/$220946 <br>
+Itch.io Page: https://oyshoboy.itch.io/dental-recviem <br>
