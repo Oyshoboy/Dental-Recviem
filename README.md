@@ -8,5 +8,18 @@ Game about dentist for Ludum Dare 47
 <br>
 <b>Space</b> - to punch<br>
 <br>
-Ludum Dare Page: https://ldjam.com/events/ludum-dare/47/$220946 <br>
-Itch.io Page: https://oyshoboy.itch.io/dental-recviem <br>
+<b>Ludum Dare 47</b> Page: https://ldjam.com/events/ludum-dare/47/$220946 <br>
+<b>Itch.io</b> Page: https://oyshoboy.itch.io/dental-recviem <br>
+
+## Assets Used:
+
+- DreamTeck Splines: [link](https://assetstore.unity.com/packages/tools/utilities/dreamteck-splines-61926)
+- Fast Color Grading: [link](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/fast-color-grading-mobile-urp-vr-ar-lwrp-135153)
+- Jiggling: [link](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/fast-color-grading-mobile-urp-vr-ar-lwrp-135153?q=Jiggling&orderBy=1)
+- Rainbow Folders: [link](https://assetstore.unity.com/packages/tools/utilities/rainbow-folders-2-143526)
+- FinalIK: [link](https://assetstore.unity.com/packages/tools/animation/final-ik-14290)
+- PuppetMaster ( had plans for that, but no time ): [link](https://assetstore.unity.com/packages/tools/physics/puppetmaster-48977)
+- Easy Combine: [link](https://assetstore.unity.com/packages/tools/utilities/easy-combine-70059)
+- Fracturing: [link](https://assetstore.unity.com/packages/tools/fracturing-destruction-9411)
+
+And a banch of music libriries.
