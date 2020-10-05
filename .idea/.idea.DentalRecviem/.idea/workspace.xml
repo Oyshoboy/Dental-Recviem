@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f56bd8b6-0c15-4299-9309-b78cc33d4202" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DentalRecviem/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterVelocityAnimator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterVelocityAnimator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AdvancedPeoplePack2/Models/CivilMale/MaleAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AdvancedPeoplePack2/Models/CivilMale/MaleAnimator.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Doctor_Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ClientTriggerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ClientTriggerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Development.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Development.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +33,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AdvancedPeoplePack2/Scripts/DemoScripts/UIControllerDEMO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterVelocityAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ClientTriggerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/SplineFollower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Doctor_Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AdvancedPeoplePack2/Scripts/CharacterCustomization.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterVelocityAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/ClientTriggerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Doctor_Controller.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601801315066</updated>
       <workItem from="1601801334720" duration="599000" />
+      <workItem from="1601803209195" duration="7579000" />
     </task>
     <servers />
   </component>
@@ -105,9 +110,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1601815148547">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1601815148547" />
   </component>
 </project>

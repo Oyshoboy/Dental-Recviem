@@ -18,6 +18,7 @@ public class Doctor_Controller : MonoBehaviour
     
     public GameObject head;
     public Vector3 headDefaultPos;
+    public Quaternion headDefaultRot;
     public Transform headTargetPos;
     
     private void Start()
@@ -34,6 +35,7 @@ public class Doctor_Controller : MonoBehaviour
         leftHandDefaultRot = leftHand.transform.localRotation;
 
         headDefaultPos = head.transform.localPosition;
+        headDefaultRot = head.transform.localRotation;
     }
 
     public IEnumerator StartMovingHands(bool forward)
@@ -60,11 +62,13 @@ public class Doctor_Controller : MonoBehaviour
     void HeadMovementController(float time)
     {
         head.transform.localPosition = Vector3.Lerp(headDefaultPos, headTargetPos.localPosition, time);
+        head.transform.localRotation = Quaternion.Lerp(headDefaultRot, headTargetPos.localRotation, time);
     }
     
     void HeadReturnController(float time)
     {
         head.transform.localPosition = Vector3.Lerp(headTargetPos.localPosition, headDefaultPos, time);
+        head.transform.localRotation = Quaternion.Lerp(headTargetPos.localRotation, headDefaultRot, time);
     }
 
     void HandsMovementController(float time)
