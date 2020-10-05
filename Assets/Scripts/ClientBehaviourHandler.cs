@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Dreamteck.Splines;
 using Dreamteck.Splines.Primitives;
 using RootMotion.FinalIK;
 using UnityEngine;
@@ -19,7 +20,8 @@ public class ClientBehaviourHandler : MonoBehaviour
     public GameObject creditCard;
     public FullBodyBipedIK playaFullBodyIk;
     public Doctor_Controller doctorController;
-
+    public ClientTriggerController clientTriggerController;
+    
     public void GiveCardToDoctor()
     {
         creditCard.SetActive(true);
@@ -37,7 +39,7 @@ public class ClientBehaviourHandler : MonoBehaviour
     }
 
 
-    public IEnumerator StartMovingHand(bool forward)
+    public IEnumerator StartMovingHand(bool forward, bool cardDisplay = false)
     {
         var time = 0f;
         while (time < 1)
@@ -59,14 +61,14 @@ public class ClientBehaviourHandler : MonoBehaviour
         {
             Debug.Log("FHINISHED");
             StopAllCoroutines();
-            StartCoroutine(StartMovingHandBack());
+            StartCoroutine(StartMovingHandBack(cardDisplay));
         }
     }
 
-    public IEnumerator StartMovingHandBack()
+    public IEnumerator StartMovingHandBack(bool cardDisplay)
     {
-        yield return new WaitForSeconds(1f);
-        creditCard.SetActive(false);
+        yield return new WaitForSeconds(.3f);
+        creditCard.SetActive(cardDisplay);
 
         var time = 0f;
         while (time < 1)
@@ -77,7 +79,39 @@ public class ClientBehaviourHandler : MonoBehaviour
         }
         
         StopAllCoroutines();
-        StartCoroutine(CardDeclindeMessage());
+
+        if (!cardDisplay)
+        {
+            StartCoroutine(CardDeclindeMessage());
+        }
+        else
+        {
+            StartCoroutine(MouthMovements(1, 10));
+            StartCoroutine(StopTalking());
+        }
+    }
+
+    private IEnumerator StopTalking()
+    {
+        yield return new WaitForSeconds(1.5f);
+        StopAllCoroutines();
+        isTalking = false;
+        clientTriggerController.CloseMouthBaebe(1);
+        StartCoroutine(StopCoroutinesWithDelay(.2f));
+    }
+
+    void ClientLeaving()
+    {
+        var splineFolower = clientTriggerController.playa.GetComponent<SplineFollower>();
+        splineFolower.enabled = true;
+    }
+    
+    private IEnumerator StopCoroutinesWithDelay(float idle)
+    {
+        yield return new WaitForSeconds(idle);
+        StopAllCoroutines();
+        ClientLeaving();
+        Debug.Log("STOPPED TALKING");
     }
 
 
@@ -111,14 +145,14 @@ public class ClientBehaviourHandler : MonoBehaviour
         var t = 0f;
         while (t < 1)
         {
-            t += Time.deltaTime / timeToMove;
+            t += Time.deltaTime * timeToMove;
             LerpController(state, t);
             yield return null;
         }
 
-        state = Random.Range(0, 1) - 1;
+        state = Random.Range(0, 2) - 1;
         if (!isTalking) state = -1;
-        StartCoroutine(MouthMovements(state, mouthMoveSpeed));
+        StartCoroutine(MouthMovements(state, Random.Range(5, 10)));
     }
 
     void LerpController(int state, float time)
@@ -126,11 +160,10 @@ public class ClientBehaviourHandler : MonoBehaviour
         var moutOpenedBlendShapeValue = clientHeadMesh.GetBlendShapeWeight(36);
         if (state == -1)
         {
-            clientHeadMesh.SetBlendShapeWeight(36, Mathf.Lerp(moutOpenedBlendShapeValue, 0, speed * Time.deltaTime));
+            clientHeadMesh.SetBlendShapeWeight(36, 100 - time * 100);
             return;
         }
 
-        clientHeadMesh.SetBlendShapeWeight(36,
-            Mathf.Lerp(moutOpenedBlendShapeValue, mouthOpenGoal, speed * Time.deltaTime));
+        clientHeadMesh.SetBlendShapeWeight(36,time * 100);
     }
 }

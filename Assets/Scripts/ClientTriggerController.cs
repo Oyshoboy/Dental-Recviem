@@ -19,7 +19,7 @@ public class ClientTriggerController : MonoBehaviour
     
     [Header("Playa Sit Config")]
     public float timeToTurn = 3f;
-    public float idleTime = 3f;
+    public float idleTime = 2f;
     private Vector3 playaDefaultPos;
     
     [Header("Playa Directions")]
@@ -118,11 +118,15 @@ public class ClientTriggerController : MonoBehaviour
     
     private void CloseMouthAndDetachHead(float value)
     {
-        playaHead.SetBlendShapeWeight(34, 100 - (value * 100)); // MOUTH WITHD
-        playaHead.SetBlendShapeWeight(36, 100 - (value * 100)); // MOUTH OPEN
-
+        CloseMouthBaebe(value);
         playaHeadEffector.positionWeight = 1 - value;
         playaHeadEffector.rotationWeight = 1 - value;
+    }
+
+    public void CloseMouthBaebe(float value)
+    {
+        playaHead.SetBlendShapeWeight(34, 100 - (value * 100)); // MOUTH WITHD
+        playaHead.SetBlendShapeWeight(36, 100 - (value * 100)); // MOUTH OPEN
     }
 
     private void OpenMouthAndMoveHead(float value)

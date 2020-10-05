@@ -20,6 +20,10 @@ public class GameLogicController : MonoBehaviour
     public ToothPlateSpawner toothPlateSpawner;
 
     public int teethFixed = 0;
+
+    public Doctor_Controller doctorController;
+    public ClientTriggerController clientTriggerController;
+    public ClientBehaviourHandler clientBehaviorHandler;
     
     List<GameObject> ChildExtractor(GameObject objct, List<GameObject> tempList)
     {
@@ -60,6 +64,13 @@ public class GameLogicController : MonoBehaviour
 
     public void RemoveOneTooth()
     {
+        if (upperShrinked.Count == upperTeeth.Count && lowerShrinked.Count == lowerTeeth.Count)
+        {
+            Debug.Log("NO MORE TOOTH!");
+            doctorController.doctorIsFighting = false;
+            StartCoroutine(StandUpAndCloseMouth());
+            return;
+        }
         if (Random.Range(0, 2) > 0 && upperShrinked.Count != upperTeeth.Count)
         {
             RemoveRandomTooth(upperTeeth, upperShrinked, true);
@@ -68,10 +79,25 @@ public class GameLogicController : MonoBehaviour
         {
             RemoveRandomTooth(lowerTeeth, lowerShrinked, false);
         }
-        else
+    }
+    
+    public IEnumerator StandUpAndCloseMouth()
+    {
+        yield return new WaitForSeconds(.3f);
+        var time = 0f;
+       
+        while (time < 1)
         {
-            Debug.Log("NO MOR TOOTHS");
+            time += Time.deltaTime * 7f;
+            ResetFaceToDefault(time);
+            
+            yield return null;
         }
+        
+        StopAllCoroutines();
+        clientBehaviorHandler.isTalking = true;
+        StartCoroutine(clientBehaviorHandler.StartMovingHand(true, true));
+        doctorController.punchedOnce = false;
     }
 
     void RemoveRandomTooth(List<GameObject> toothList, List<int> jawShrinked, bool upperJaw)
@@ -82,12 +108,10 @@ public class GameLogicController : MonoBehaviour
         if (jawShrinked.Contains(pickedIndex))
         {
             RemoveRandomTooth(toothList, jawShrinked, upperJaw);
-            Debug.Log("DUPLICATE, LET's DO AGAIN");
             return;
         }
         else
         {
-            Debug.Log("SHRINK TOOTH");
             toothList[pickedIndex].GetComponent<FJiggling_Grow>().StartShrinking();
             if (upperJaw)
             {
@@ -96,10 +120,18 @@ public class GameLogicController : MonoBehaviour
             else
             {
                 lowerShrinked.Add(pickedIndex);
-            }    
+            }
         }
-        
-        
+    }
+
+    void ResetFaceToDefault(float value)
+    {
+        value = 100 - value * 100;
+        doctorController.playaHead.SetBlendShapeWeight(34, value); // MOUTH WITHD
+        doctorController.playaHead.SetBlendShapeWeight(36,  value);
+        doctorController.playaHead.SetBlendShapeWeight(43, value);
+        doctorController.playaHead.SetBlendShapeWeight(44, value);
+        doctorController.playaHead.SetBlendShapeWeight(46, value);
     }
     
     public void GrowOneTooth()
@@ -128,6 +160,14 @@ public class GameLogicController : MonoBehaviour
         }
     }
 
+    void ToothEnabler(List<GameObject> list, bool upper)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            list[i].GetComponent<FJiggling_Grow>().StartGrowing();
+        }
+    }
+
     void InitRandomTeethRemoved()
     {
         RandomShrinker(upperTeeth, true);
@@ -136,8 +176,13 @@ public class GameLogicController : MonoBehaviour
 
     public void InitToothAndStuff()
     {
-        InitRandomTeethRemoved();
+        upperShrinked.Clear();
+        lowerShrinked.Clear();
 
+        ToothEnabler(upperTeeth, true);
+        ToothEnabler(lowerTeeth, false);
+        
+        InitRandomTeethRemoved();
         toothPlateSpawner.SpawnToothOnPlate(upperShrinked.Count + lowerShrinked.Count);
     }
 

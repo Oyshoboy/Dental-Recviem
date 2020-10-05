@@ -27,6 +27,7 @@ public class Doctor_Controller : MonoBehaviour
     public GameObject head;
     public Vector3 headDefaultPos;
     public Quaternion headDefaultRot;
+    public Transform headDefault;
     public Transform headTargetPos;
 
     public GameObject patientHeadTarget;
@@ -40,7 +41,7 @@ public class Doctor_Controller : MonoBehaviour
     public Transform doctorFightPosition;
     public Transform doctorSurgeryPositon;
     public SkinnedMeshRenderer playaHead;
-    private bool punchedOnce = false;
+    public bool punchedOnce = false;
     public ParticleSystem bloodParticles;
     
     
@@ -77,11 +78,13 @@ public class Doctor_Controller : MonoBehaviour
             {
                 headFollowController.targetObj = PatientHeadTargetSurgery;
                 HandsMovementController(time);
+                //HeadState = 1;
                 HeadMovementController(time);
             }
             else
             {
                 HandsReturnController(time);
+                //HeadState = 0;
                 HeadReturnController(time);
                 headFollowController.targetObj = patientHeadTarget;
             }
@@ -141,6 +144,11 @@ public class Doctor_Controller : MonoBehaviour
             {
                 if (!handsHitCycle && !rightHandCycle)
                 {
+                    if (!punchedOnce)
+                    {
+                        punchedOnce = true;
+                        OpenMouthWhenPunched();
+                    }
                     StopAllCoroutines();
                     handsHitCycle = true;
                     rightHandCycle = true;
@@ -168,6 +176,8 @@ public class Doctor_Controller : MonoBehaviour
         {
             PositionHandler(doctorSurgeryPositon);
         }
+        
+        //HeadPositionHandler();
     }
     
     public IEnumerator RightHook(float strikeSpeed)
@@ -182,11 +192,6 @@ public class Doctor_Controller : MonoBehaviour
         }
         
         StopAllCoroutines();
-        if (!punchedOnce)
-        {
-            punchedOnce = true;
-            OpenMouthWhenPunched();
-        }
         bloodParticles.Play();
         StartCoroutine(RightHookReturn(12));
     }
@@ -204,8 +209,6 @@ public class Doctor_Controller : MonoBehaviour
         
         StopAllCoroutines();
         rightHandCollider.SetActive(false);
-        //Debug.Log("RIGHT HOOK COMPLETE!");
-        //rightHandCycle = false;
     }
     
     
@@ -258,4 +261,17 @@ public class Doctor_Controller : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, target.rotation, speed * Time.deltaTime);
         transform.position = Vector3.Slerp(transform.position, target.position, speed * Time.deltaTime);
     }
+
+    /*
+    private void HeadPositionHandler()
+    {
+        var target = headDefault;
+        if (HeadState == 1)
+        {
+            target = headTargetPos;
+        }
+        head.transform.localPosition = Vector3.Lerp(head.transform.localPosition, target.localPosition, speed * Time.deltaTime);
+        head.transform.localRotation = Quaternion.Lerp(head.transform.localRotation, target.localRotation, speed * Time.deltaTime);
+    }
+    */
 }
