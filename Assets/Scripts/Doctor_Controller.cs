@@ -38,6 +38,11 @@ public class Doctor_Controller : MonoBehaviour
         headDefaultRot = head.transform.localRotation;
     }
 
+    public void CallFallbackCoroutine(bool forward)
+    {
+        StartCoroutine(StartMovingHands(false));
+    }
+
     public IEnumerator StartMovingHands(bool forward)
     {
         var time = 0f;
