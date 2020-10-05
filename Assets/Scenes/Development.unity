@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8c18dfd10378b4f46b35045fcb21904e,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -28303,19 +28304,19 @@ MonoBehaviour:
   targetRigidbody2D: {fileID: 0}
   targetTransform: {fileID: 4699717625501136106}
   _result:
-    position: {x: -3.5813758, y: 0, z: 2.7176354}
+    position: {x: -2.335397, y: 0, z: 6.478166}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.25170428, y: 0, z: -0.9678041}
+    forward: {x: -0.96777236, y: 0, z: -0.25182644}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
-    percent: 0.39399999380111694
+    percent: 0.1120000034570694
   _finalResult:
-    position: {x: -3.5813758, y: 0, z: 2.7176354}
+    position: {x: -2.335397, y: 0, z: 6.478166}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.25170428, y: 0, z: -0.9678041}
+    forward: {x: -0.96777236, y: 0, z: -0.25182644}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
-    percent: 0.39399999380111694
+    percent: 0.1120000034570694
   wrapMode: 0
   followMode: 0
   autoStartPosition: 0
@@ -28323,7 +28324,7 @@ MonoBehaviour:
   preserveUniformSpeedWithOffset: 0
   _followSpeed: 1.55
   _followDuration: 1
-  _startPosition: 0.39399999380111694
+  _startPosition: 0.1120000034570694
   editorSetPosition: 1
 --- !u!1001 &1927633916
 PrefabInstance:
@@ -43046,8 +43047,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4699717625501136108}
-  m_LocalRotation: {x: -0, y: 0.9919184, z: -0, w: 0.12687753}
-  m_LocalPosition: {x: -3.5813758, y: 0, z: 2.7176354}
+  m_LocalRotation: {x: -0, y: -0.7911468, z: -0, w: 0.6116263}
+  m_LocalPosition: {x: -2.335397, y: 0, z: 6.478166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4699717625124687621}
