@@ -108,8 +108,9 @@ public class ClientTriggerController : MonoBehaviour
             MoveToSitPosition(time, playaDefaultPos);
             
             yield return null;
-        } 
-        playa.GetComponent<SplineFollower>().enabled = true;
+        }
+        
+//        playa.GetComponent<SplineFollower>().enabled = true;
     }
     
     private void CloseMouthAndDetachHead(float value)

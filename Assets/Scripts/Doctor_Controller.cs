@@ -20,6 +20,17 @@ public class Doctor_Controller : MonoBehaviour
     public Vector3 headDefaultPos;
     public Quaternion headDefaultRot;
     public Transform headTargetPos;
+
+    public GameObject patientHeadTarget;
+
+    public GameObject PatientHeadTargetSurgery;
+
+    public HeadFollowController headFollowController;
+
+    public bool doctorIsFighting = false;
+    public int speed = 5;
+    public Transform doctorFightPosition;
+    public Transform doctorSurgeryPositon;
     
     private void Start()
     {
@@ -51,6 +62,7 @@ public class Doctor_Controller : MonoBehaviour
             time += Time.deltaTime;
             if (forward)
             {
+                headFollowController.targetObj = PatientHeadTargetSurgery;
                 HandsMovementController(time);
                 HeadMovementController(time);
             }
@@ -58,6 +70,7 @@ public class Doctor_Controller : MonoBehaviour
             {
                 HandsReturnController(time);
                 HeadReturnController(time);
+                headFollowController.targetObj = patientHeadTarget;
             }
 
             yield return null;
@@ -92,5 +105,23 @@ public class Doctor_Controller : MonoBehaviour
         
         leftHand.transform.localPosition = Vector3.Lerp(LeftHandTargetPos.localPosition, leftHandDefaultPos, time);
         leftHand.transform.localRotation = Quaternion.Lerp(LeftHandTargetPos.localRotation, leftHandDefaultRot, time);
+    }
+
+    public void Update()
+    {
+        if (doctorIsFighting)
+        {
+            PositionHandler(doctorFightPosition);
+        }
+        else
+        {
+            PositionHandler(doctorSurgeryPositon);
+        }
+    }
+
+    private void PositionHandler(Transform target)
+    {
+        transform.rotation = Quaternion.Slerp(transform.rotation, target.rotation, speed * Time.deltaTime);
+        transform.position = Vector3.Slerp(transform.position, target.position, speed * Time.deltaTime);
     }
 }
