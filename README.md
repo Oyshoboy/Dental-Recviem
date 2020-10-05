@@ -13,6 +13,8 @@ Game about dentist for Ludum Dare 47
 
 ## Assets Used:
 
+- Polygon Packs: [link](https://assetstore.unity.com/publishers/5217)
+- Advanced People Pack 2: [link](https://assetstore.unity.com/packages/3d/characters/humanoids/humans/advanced-people-pack-2-170756)
 - DreamTeck Splines: [link](https://assetstore.unity.com/packages/tools/utilities/dreamteck-splines-61926)
 - Fast Color Grading: [link](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/fast-color-grading-mobile-urp-vr-ar-lwrp-135153)
 - Jiggling: [link](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/fast-color-grading-mobile-urp-vr-ar-lwrp-135153?q=Jiggling&orderBy=1)
