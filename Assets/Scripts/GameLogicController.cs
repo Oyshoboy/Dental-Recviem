@@ -190,6 +190,12 @@ public class GameLogicController : MonoBehaviour
     void Start()
     {
         InitTeethFromJaws();
+        
+        void Start()
+        {
+            // Make the game run as fast as possible
+            Application.targetFrameRate = 300;
+        }
     }
     
 }
