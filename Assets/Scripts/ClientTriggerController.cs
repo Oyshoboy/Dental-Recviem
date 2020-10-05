@@ -30,7 +30,7 @@ public class ClientTriggerController : MonoBehaviour
     public Doctor_Controller doctorController;
 
     public GameLogicController gameLogicController;
-
+    public ToothSoundProcessor toothSoundProcess;
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "PlayaCollider")
@@ -70,6 +70,7 @@ public class ClientTriggerController : MonoBehaviour
         }
         
         time = 0f;
+        toothSoundProcess.Breathe();
         while (time < 1)
         {
             time += Time.deltaTime;
@@ -141,6 +142,7 @@ public class ClientTriggerController : MonoBehaviour
     private void PlayerSit(string name)
     {
         playaAnimator.SetTrigger(name);
+        toothSoundProcess.ChairCreak();
     }
 
     void TurnLeft(float time)

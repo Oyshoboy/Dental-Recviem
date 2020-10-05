@@ -28,6 +28,7 @@ public class ClientBehaviourHandler : MonoBehaviour
     public FullBodyBipedIK playaFullBodyIk;
     public Doctor_Controller doctorController;
     public ClientTriggerController clientTriggerController;
+    public ToothSoundProcessor toothSoundProcessor;
     
     public void GiveCardToDoctor()
     {
@@ -144,6 +145,7 @@ public class ClientBehaviourHandler : MonoBehaviour
     IEnumerator DoctorReadyToFight()
     {
         yield return new WaitForSeconds(1f);
+        toothSoundProcessor.Hmmm();
         Debug.Log("DOCTOR IS READY TO FIGHT");
         doctorController.doctorIsFighting = true;
         yield return null;

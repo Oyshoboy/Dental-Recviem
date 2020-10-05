@@ -19,16 +19,35 @@ public class ToothSoundProcessor : MonoBehaviour
     public AudioClip[] deepWhooshes;
 
     public AudioClip[] creaks;
+
+    public AudioClip[] breathe;
+
+    public AudioClip[] hmms;
+
+    public void Hmmm()
+    {
+        Source.PlayOneShot(hmms[Random.Range(0, hmms.Length)], 0.9f);
+    }
+    
+    public void Breathe()
+    {
+        Source.PlayOneShot(breathe[Random.Range(0, breathe.Length)], 0.6f);
+    }
     
     public void InsertTooth()
     {
         Source.PlayOneShot(stuck[Random.Range(0, stuck.Length)], 0.7f);
         StartCoroutine(insertSoundPlay(.1f));
+
+        if (Random.Range(0, 100) > 90)
+        {
+            Hmmm();
+        }
     }
     
     public void ChairCreak()
     {
-        Source.PlayOneShot(creaks[Random.Range(0, creaks.Length)], 0.45f);
+        Source.PlayOneShot(creaks[Random.Range(0, creaks.Length)], 0.25f);
     }
 
 

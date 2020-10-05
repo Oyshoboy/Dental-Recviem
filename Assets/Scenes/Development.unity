@@ -33084,6 +33084,7 @@ MonoBehaviour:
   playaSitDirection: {fileID: 1786477436}
   doctorController: {fileID: 1288185895}
   gameLogicController: {fileID: 1092062737}
+  toothSoundProcess: {fileID: 4699717625501136111}
 --- !u!65 &1883933088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51291,6 +51292,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9a0f9613b3091ca4ebc98098dd86d035, type: 3}
   - {fileID: 8300000, guid: c5a539849caade94bb539dd2c3f9fd08, type: 3}
   - {fileID: 8300000, guid: bc1c315f82324524182788c1d6dcfb64, type: 3}
+  creaks:
+  - {fileID: 8300000, guid: c39be8456fc7ee442bcf997b50f89fad, type: 3}
+  - {fileID: 8300000, guid: ce52e7660e6b2b948b6c69af6852ab14, type: 3}
+  - {fileID: 8300000, guid: eac5ae9cb3068e94a9dd3126aa53865c, type: 3}
+  - {fileID: 8300000, guid: 1651ad3651c01ac4aa4c813f8a254843, type: 3}
+  - {fileID: 8300000, guid: 434538501b2feb143a8db2c793f536f8, type: 3}
 --- !u!1 &4715162057713737014
 GameObject:
   m_ObjectHideFlags: 0
