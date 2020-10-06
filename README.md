@@ -7,7 +7,7 @@
 <b>Mouse</b> - to manipulate with teeth implants.<br>
 <b>Space</b> - to punch<br>
 <br>
-<b>Play Online</b> Page: https://oyshoboy.itch.io/dental-recviem <br>
+<b>Play Online</b>: https://oyshoboy.itch.io/dental-recviem <br>
 <b>Ludum Dare 47</b> Page: https://ldjam.com/events/ludum-dare/47/$220946 <br>
 
 ## Assets Used:
