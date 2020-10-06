@@ -24,4 +24,11 @@
 - Easy Combine: [link](https://assetstore.unity.com/packages/tools/utilities/easy-combine-70059)
 - Fracturing: [link](https://assetstore.unity.com/packages/tools/fracturing-destruction-9411)
 
-And a banch of music libriries.
+## All sounds are from Audio Libraries:
+- Human Vocal Sounds: [link](https://assetstore.unity.com/packages/audio/sound-fx/voices/human-vocal-sounds-154462)
+- Footsteps: [link](https://assetstore.unity.com/packages/audio/sound-fx/foley/footsteps-sound-pack-165660)
+- Ultimate Sound FX Bundle: [link](https://assetstore.unity.com/packages/audio/sound-fx/ultimate-sound-fx-bundle-151756)
+- Colossal Game Music Collection: [link](https://assetstore.unity.com/packages/audio/music/orchestral/colossal-game-music-collection-88190)
+- Mega Game Music Collection: [link](https://assetstore.unity.com/packages/audio/music/orchestral/mega-game-music-collection-54687)
+
+
