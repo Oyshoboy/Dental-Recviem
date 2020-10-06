@@ -3,7 +3,7 @@
 
 ##### Game about dentist for Ludum Dare 47
 
-<b>Controls:</b><br>
+##### <b>Controls:</b><br>
 <b>Mouse</b> - to manipulate with teeth implants.<br>
 <b>Space</b> - to punch<br>
 <br>
