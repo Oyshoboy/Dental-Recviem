@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f56bd8b6-0c15-4299-9309-b78cc33d4202" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Doctor_Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ClientTriggerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ClientTriggerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Development.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Development.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DentalRecviem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DentalRecviem/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +31,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLogicController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/IK Components/FullBodyBipedIK.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClientBehaviourHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToothPlateSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Doctor_Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClientTriggerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AdvancedPeoplePack2/Scripts/DemoScripts/UIControllerDEMO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/RootMotion/FinalIK/IK Components/IK.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DragAndDropBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterVelocityAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ClientTriggerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Dreamteck/Splines/Components/SplineFollower.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Doctor_Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PoissonDiscSampling.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/RootMotion/Shared Scripts/SolverManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AdvancedPeoplePack2/Scripts/CharacterCustomization.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -46,6 +52,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterVelocityAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/ClientTriggerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Doctor_Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PoissonDiscSampling.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ToothPlateSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragAndDropBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/WatchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/HeadFollowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/ClientBehaviourHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/StepsSoundController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GlassTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/ClockSoundProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/ToothSoundProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientTriggerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ClientBehaviourHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Doctor_Controller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameLogicController.cs" />
       </list>
     </option>
   </component>
@@ -64,6 +84,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -92,6 +113,7 @@
       <updated>1601801315066</updated>
       <workItem from="1601801334720" duration="599000" />
       <workItem from="1601803209195" duration="7579000" />
+      <workItem from="1601857071826" duration="41367000" />
     </task>
     <servers />
   </component>
@@ -117,9 +139,14 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1601815148547">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1304" y="243" key="run.anything.popup" timestamp="1601874195634">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1304" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1601874195634" />
+    <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1601887575777">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1297" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1601887575777" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1601815148547" />
   </component>
 </project>
