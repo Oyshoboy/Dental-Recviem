@@ -5,11 +5,10 @@
 
 <b>Controls:</b><br>
 <b>Mouse</b> - to manipulate with teeth implants.<br>
-<br>
 <b>Space</b> - to punch<br>
 <br>
+<b>Play Online</b> Page: https://oyshoboy.itch.io/dental-recviem <br>
 <b>Ludum Dare 47</b> Page: https://ldjam.com/events/ludum-dare/47/$220946 <br>
-<b>Itch.io</b> Page: https://oyshoboy.itch.io/dental-recviem <br>
 
 ## Assets Used:
 <b>All assets are ignored from Git, download assets, to propperly launch project.</b>
