@@ -11,7 +11,7 @@
 <b>Ludum Dare 47</b> Page: https://ldjam.com/events/ludum-dare/47/$220946 <br>
 <b>Itch.io</b> Page: https://oyshoboy.itch.io/dental-recviem <br>
 
-## Assets Used:
+## Assets Used ( They Are ignored from Git, download assets, to propperly launch project ):
 
 - Polygon Packs: [link](https://assetstore.unity.com/publishers/5217)
 - Advanced People Pack 2: [link](https://assetstore.unity.com/packages/3d/characters/humanoids/humans/advanced-people-pack-2-170756)
